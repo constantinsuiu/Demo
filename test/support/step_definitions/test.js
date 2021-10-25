@@ -40,10 +40,6 @@ Then(/I view the company ratings/, () => {
             console.log(`Checking ${rating} for ${agency}`)
             console.log(`${CreditRatingsPage.tableCell(rowIndex, columnIndex).getText()} compared to ${data[agency][rating]}`);
             expect(CreditRatingsPage.tableCell(rowIndex, columnIndex).getText()).toEqual(data[agency][rating]);
-
         })
-        
     });
-
-    
 });
