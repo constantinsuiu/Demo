@@ -38,8 +38,10 @@ Then(/I view the company ratings/, () => {
         Object.keys(data[agency]).forEach((rating) => {
             columnIndex = CreditRatingsPage.getHeaderIndex(rating) + 1;
             rowIndex = CreditRatingsPage.getRowIndex(agency);
-            console.log(`Checking ${rating} for ${data[agency]}`)
+            console.log(`Checking ${rating} for ${agency}`)
+            console.log(`${CreditRatingsPage.tableCell(rowIndex, columnIndex).getText()} compared to ${data[agency][rating]}`);
             expect(CreditRatingsPage.tableCell(rowIndex, columnIndex).getText()).toEqual(data[agency][rating]);
+
         })
         
     });
