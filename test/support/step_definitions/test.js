@@ -5,7 +5,6 @@ import ContactPage from '../pages/ContactPage';
 import CreditRatingsPage from '../pages/CreditRatingsPage';
 
 import data from '../data/ratings'
-import { isExportDeclaration } from 'typescript';
 
 
 Given(/^I navigate to (.*)/, async (page) => {
